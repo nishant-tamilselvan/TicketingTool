@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<!-- MAIN CONTENT WRAPPER -->
+	<div id="main-content-wrapper" class="content-wrapper ">
+
+		<div class="row">
+			<div class="col-md-4 ">
+				<ul class="breadcrumb">
+					<li><i class="fa fa-home"></i><a href="#">Home</a></li>
+					<li class="active">Dashboard</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- main -->
+		<div class="content">
+			<div class="main-header">
+				<h2>{{eventlist.subject}}</h2>
+				<em>Subject / Name</em>
+			</div>
+			<div class="main-content">
+
+				<div class="project-section general-info">
+								<h3>General Info | Description</h3>
+								<a href='/events'><button type="button" class="btn btn-sm btn-default pull-right"><i class="fa fa-home"></i> Events Home</button></a>
+								<a href='/events/edit/{{eventlist.id}}'><button type="button" class="btn btn-sm btn-primary pull-right"><i class="fa fa-edit"></i> Edit Project</button></a>
+
+								<p> {{eventlist.message}}</p>
+								<div class="row">
+									<div class="col-sm-9">
+										<dl class="dl-horizontal">
+											<dt>Date:</dt>
+											<dd>{{eventlist.date|date}}</dd>
+											<dt>category:</dt>
+											<dd>{{eventlist.category}}</dd>
+
+											<dt>Priority:</dt>
+											<dd><span class="label label-danger">{{eventlist.priority}}</span></dd>
+											<dt>Status:</dt>
+											<dd><span class="label label-success">ACTIVE</span></dd>
+
+										</dl>
+									</div>
+
+								</div>
+							</div>
+
+			</div>
+		</div>
+		<!-- /main -->
+		<!-- FOOTER -->
+		<footer class="footer">
+			&copy; 2016 Nishant Tamilselvan
+		</footer>
+		<!-- END FOOTER -->
+	</div>
+	<!-- END CONTENT WRAPPER -->
+
+{% endblock %}

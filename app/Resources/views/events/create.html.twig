@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<!-- MAIN CONTENT WRAPPER -->
+	<div id="main-content-wrapper" class="content-wrapper ">
+
+		<div class="row">
+			<div class="col-md-4 ">
+				<ul class="breadcrumb">
+					<li><i class="fa fa-home"></i><a href="#">Home</a></li>
+					<li class="active">Dashboard</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- main -->
+    <!-- main -->
+
+    <div class="content">
+		<a href='/events'><button type="button" class="btn btn-sm btn-default pull-right"><i class="fa fa-home"></i> Events Home</button></a>
+
+      <div class="main-header">
+        <h2>Create Event / Ticket</h2>
+        <em>create Event / ticket form</em>
+      </div>
+
+      <div class="main-content">
+
+
+        <div class="row">
+
+          <div class="col-md-8">
+
+
+					{{form_start(form)}}
+					{{form_widget(form)}}
+					{{form_end(form)}}
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /main -->
+		<!-- /main -->
+		<!-- FOOTER -->
+		<footer class="footer">
+			&copy; 2016 Nishant Tamilselvan
+		</footer>
+		<!-- END FOOTER -->
+	</div>
+	<!-- END CONTENT WRAPPER -->
+
+
+{% endblock %}

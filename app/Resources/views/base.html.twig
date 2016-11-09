@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie ie9" lang="en" class="no-js"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+    <head>
+      <title>{% block title %}Event Manager!{% endblock %}</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="description" content="Eventmngr - An Event Manager">
+      <meta name="author" content="Nishant Tamilselvan">
+
+      {% block stylesheets %}
+      <!-- CSS -->
+
+      <link href="{{ asset('bundles/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{ asset('bundles/assets/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{ asset('bundles/assets/css/main.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{ asset('bundles/assets/css/my-custom-styles.css') }}" rel="stylesheet" type="text/css">
+
+
+
+      {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body class="sidebar-fixed topnav-fixed dashboard forms-inplace-editing">
+
+      <div id="wrapper" class="wrapper">
+      	<!-- TOP BAR -->
+      	<div class="top-bar navbar-fixed-top">
+      		<div class="container">
+      			<div class="clearfix">
+      				<a href="#" class="pull-left toggle-sidebar-collapse"><i class="fa fa-bars"></i></a>
+      				<!-- logo -->
+      				<div class="pull-left left logo">
+      					<a href="/events"><img src="{{ asset('bundles/assets/img/Event_Manager_logo.png') }}" alt="KingAdmin - Admin Dashboard" /></a>
+      					<h1 class="sr-only">Event Manager Dashboard</h1>
+      				</div>
+      				<!-- end logo -->
+      				<div class="pull-right right">
+      					<!-- search box -->
+      					<div class="searchbox">
+      						<div id="tour-searchbox" class="input-group">
+      							<input type="search" class="form-control" placeholder="enter keyword here...">
+      							<span class="input-group-btn">
+      								<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      							</span>
+      						</div>
+      					</div>
+      					<!-- end search box -->
+      					<!-- top-bar-right -->
+      					<div class="top-bar-right">
+
+      						<!-- logged user and the menu -->
+      						<div class="logged-user">
+      							<div class="btn-group">
+      								<a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+      									<!-- < img src="{{ asset("bundles/assets/img/user-avatar.png")}}" alt="User Avatar" /> -->
+      									<span class="name">Welcome User</span> <span class="caret"></span>
+      								</a>
+      								<ul class="dropdown-menu" role="menu">
+      									<li>
+      										<a href="#">
+      											<i class="fa fa-user"></i>
+      											<span class="text">Profile</span>
+      										</a>
+      									</li>
+      									<li>
+      										<a href="#">
+      											<i class="fa fa-cog"></i>
+      											<span class="text">Settings</span>
+      										</a>
+      									</li>
+      									<li>
+      										<a href="#">
+      											<i class="fa fa-power-off"></i>
+      											<span class="text">Logout</span>
+      										</a>
+      									</li>
+      								</ul>
+      							</div>
+      						</div>
+      						<!-- end logged user and the menu -->
+      					</div>
+      					<!-- end top-bar-right -->
+      				</div>
+      			</div>
+      		</div>
+      		<!-- /container -->
+      	</div>
+      	<!-- END TOP BAR -->
+
+      	<!-- LEFT SIDEBAR -->
+      	<div id="left-sidebar" class="left-sidebar ">
+      		<!-- main-nav -->
+      		<div class="sidebar-scroll">
+      			<nav class="main-nav">
+      				<ul class="main-menu">
+      					<li class="active"><a href="#" class="js-sub-menu-toggle"><i class="fa fa-dashboard fa-fw"></i><span class="text">My Account</span>
+      						<i class="toggle-icon fa fa-angle-down"></i></a>
+      						<ul class="sub-menu open">
+      							<li ><a href="#"><span class="text">View Profile</span></a></li>
+      							<li><a href="#"><span class="text">Logout</span></a></li>
+      						</ul>
+      					</li>
+      					<li><a href="/events/create"><i class="fa fa-edit"></i><span class="text" >Create New</a></li>
+
+      				</ul>
+      			</nav>
+      			<!-- /main-nav -->
+      		</div>
+      	</div>
+      	<!-- END LEFT SIDEBAR -->
+
+        {% block body %}{% endblock %}
+
+</div>
+
+        {% block javascripts %}
+        <script src="{{ asset('bundles/assets/js/jquery/jquery-2.1.0.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/bootstrap/bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/modernizr/modernizr.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/bootstrap-tour/bootstrap-tour.custom.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/king-common.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/stat/jquery.easypiechart.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/raphael/raphael-2.1.0.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/stat/flot/jquery.flot.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/stat/flot/jquery.flot.resize.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/stat/flot/jquery.flot.time.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/stat/flot/jquery.flot.pie.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/stat/flot/jquery.flot.tooltip.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/datatable/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/datatable/dataTables.bootstrap.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/jquery-mapael/jquery.mapael.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/plugins/raphael/maps/usa_states.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/king-chart-stat.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/king-table.js') }}"></script>
+        <script src="{{ asset('bundles/assets/js/king-components.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/bootstrap-editable/jquery.mockjax.min.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/moment/moment.min.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/bootstrap-editable/bootstrap-editable.min.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/typeahead/typeahead.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/typeahead/typeaheadjs.1.5.1.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/select2/select2.min.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/bootstrap-editable/address.custom.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/plugins/bootstrap-editable/demo-mock.js') }}"></script>
+      	<script src="{{ asset('bundles/assets/js/king-elements.js') }}"></script>
+
+        {% endblock %}
+    </body>
+</html>
